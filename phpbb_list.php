@@ -61,7 +61,7 @@ $query = 'select '
 
 
 // create table headers
-echo	'<html><body><table border=1><tr><th>UserName</th><th>State</th><th>Last Visit</th><th>City</th>'
+echo	'<html><body><table border=1><tr><th>UserName</th><th>Last Visit</th><th>City</th><th>State</th>'
     	 . '<th>Airport</th><th>Email</th><th>Sig</th><th>Occ</th><th>Interests</th></tr>';
 
 // run query
