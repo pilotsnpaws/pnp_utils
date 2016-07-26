@@ -66,6 +66,9 @@ $result=$f_mysqli->query($query);
 if(!$result) { 
 		echo logEvent("Error $f_mysqli->error to get max user id from forum, exiting. Query: $queryMaxUserForum");
 	} else {
+		$rowsReturned = $result->num_rows; 
+		echo nl2br ("Rows returned: $rowsReturned \n") ; 
+
 		while($row = $result->fetch_assoc()) {
 			echo '<tr><td>' . $row['username'] . '</td>'
        . '<td>' . $row["state"]  . '</td>'
