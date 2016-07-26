@@ -81,8 +81,8 @@ if(!$result) {
        . '<td>' . $row["apt_id"]  . '</td>'
        . '<td>' . $row["user_email"]  . '</td>'
        . '<td>' . $row["user_sig"]  . ' &nbsp</td>'
-       . '<td>' . $row["user_occ"]  . ' &nbsp</td>'
-       . '<td>' . $row["user_interests"]  . ' &nbsp</td>'
+       . '<td>' . $row["pf_phpbb_occupation"]  . ' &nbsp</td>'
+       . '<td>' . $row["pf_phpbb_interests"]  . ' &nbsp</td>'
        . '</tr>' ;
 
 		}
