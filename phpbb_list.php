@@ -4,8 +4,9 @@ function xmlspecialchars($text) {
 }
 
 
+include "settings.php";
+include ($configPath);
 
-include ( "../ca_dev/local_config.php");
 
 // get DB creds from forum config, AWS creds are in config as well but we don't rename them
 $f_username=$dbuser;
