@@ -75,15 +75,15 @@ if(!$result) {
 
 		while($row = $result->fetch_assoc()) {
 			echo '<tr><td>' . $row['username'] . '</td>'
-       . '<td>' . $row["state"]  . '</td>'
-       . '<td>' . $row["lastvisit"]  . ' &nbsp</td>'
-       . '<td>' . $row["city"]  . '</td>'
-       . '<td>' . $row["apt_id"]  . '</td>'
-       . '<td>' . $row["user_email"]  . '</td>'
-       . '<td>' . $row["user_sig"]  . ' &nbsp</td>'
-       . '<td>' . $row["pf_phpbb_occupation"]  . ' &nbsp</td>'
-       . '<td>' . $row["pf_phpbb_interests"]  . ' &nbsp</td>'
-       . '</tr>' ;
+       	. '<td>' . $row["lastvisit"]  . ' &nbsp</td>'
+       	. '<td>' . $row["city"]  . '</td>'
+       	. '<td>' . $row["state"]  . '</td>'
+				. '<td>' . $row["apt_id"]  . '</td>'
+       	. '<td>' . $row["user_email"]  . '</td>'
+       	. '<td>' . $row["user_sig"]  . ' &nbsp</td>'
+       	. '<td>' . $row["pf_phpbb_occupation"]  . ' &nbsp</td>'
+       	. '<td>' . $row["pf_phpbb_interests"]  . ' &nbsp</td>'
+       	. '</tr>' ;
 
 		}
 	}
