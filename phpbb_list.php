@@ -4,9 +4,13 @@ function xmlspecialchars($text) {
 }
 
 
+include 'utils_functions.php';
 include "settings.php";
 include ($configPath);
+$logType = '[utils]';
 
+echo "Environment: $environment"; 
+newline();
 
 // get DB creds from forum config, AWS creds are in config as well but we don't rename them
 $f_username=$dbuser;
