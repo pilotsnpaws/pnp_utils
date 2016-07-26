@@ -1,0 +1,27 @@
+<?php
+
+// this should mimic the phpBB forum config.php file, but you'll need to add the AWS stuff in
+
+$dbms = 'mysqli';
+$dbhost = '';
+$dbport = '';
+$dbname = '';
+$dbuser = '';
+$dbpasswd = '';
+$table_prefix = 'phpbb_';
+$acm_type = 'file';
+$load_extensions = '';
+
+@define('PHPBB_INSTALLED', true);
+// @define('DEBUG', true);
+// @define('DEBUG_EXTRA', true);
+
+// PNP AWS additions below
+$aws_username='';
+$aws_password='';
+$aws_database='';
+$aws_server='';
+// end PNP AWS
+
+
+?>
