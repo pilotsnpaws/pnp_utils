@@ -38,8 +38,8 @@ $query = 'select '
         . ' phpbb_users.username ,'
         . ' phpbb_users.user_email, '
         . ' phpbb_users.user_sig, '
-        . ' phpbb_users.user_occ, '
-        . ' phpbb_users.user_interests, '
+        . ' pf_phpbb_occupation, '
+        . ' pf_phbb_interests, '
         . ' from_unixtime(phpbb_users.user_lastvisit) as lastvisit, ' 
         . ' phpbb_profile_fields_data.user_id ,'
         . ' phpbb_profile_fields_data.pf_airport_id ,'
@@ -68,7 +68,7 @@ echo	'<html><body><table border=1><tr><th>UserName</th><th>State</th><th>Last Vi
 $result=$f_mysqli->query($query);
 
 if(!$result) { 
-		echo logEvent("Error $f_mysqli->error to get max user id from forum, exiting. Query: $queryMaxUserForum");
+		echo logEvent("Error $f_mysqli->error , exiting. Query: $queryMaxUserForum");
 	} else {
 		$rowsReturned = $result->num_rows; 
 		echo nl2br ("Rows returned: $rowsReturned \n") ; 
