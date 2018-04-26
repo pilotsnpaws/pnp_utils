@@ -53,7 +53,8 @@ $query = 'select '
         . ' phpbb_profile_fields_data ,'
         . ' airports'
         . ' where ' 
-        . ' phpbb_profile_fields_data.pf_pilot_yn = 1 and'
+        . ' phpbb_profile_fields_data.pf_pilot_yn = 1 and '
+        . ' user_inactive_reason = 0 and /* include active only, exclude deactivated users */ ' 
         . ' phpbb_profile_fields_data.user_id = phpbb_users.user_id and '
         . ' airports.apt_id = UCASE(phpbb_profile_fields_data.pf_airport_id) ' 
 				. ' order by airports.state, phpbb_users.user_lastvisit desc ;'
@@ -72,6 +73,7 @@ if(!$result) {
 	} else {
 		$rowsReturned = $result->num_rows; 
 		echo nl2br ("Rows returned: $rowsReturned \n") ; 
+    echo nl2br ("Only forum users where Pilot=Y and currently active are shown. \n") ; 
 
 		while($row = $result->fetch_assoc()) {
 			echo '<tr><td>' . $row['username'] . '</td>'
